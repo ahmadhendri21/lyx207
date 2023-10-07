@@ -1,0 +1,18 @@
+@layer utilities {
+
+    .popup-a1-desktop-skin {
+        transform: translateY(200px) scale(.2);
+    }
+    
+    .popup-a1-desktop-skin-active {
+        transform: translateY(-40px) scale(1);
+    }
+
+    .popup-a1-mobile-skin {
+        transform: translateY(40px);
+    }
+    
+    .popup-a1-mobile-skin-active {
+        transform: translateY(0);
+    }
+}

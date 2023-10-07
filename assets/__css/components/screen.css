@@ -1,0 +1,77 @@
+@layer components{
+    
+    /* auth screen */
+    .sc-auth {
+        position: fixed;
+        top:0;
+        left:0;
+        width:100dvw;
+        height:100dvh;
+        @apply 
+        flex
+        justify-center
+        items-center
+        bg-[url('./img/wall.png')] 
+        bg-cover;
+    }
+
+
+
+
+    /* main screen */
+    .sc-main {
+        position: fixed;
+        width: 100dvw;
+        height:100dvh;
+        background-color: #fff;
+        @apply
+        bg-[url('./img/wall.png')] 
+        bg-cover
+    }
+    .sc-main > header {
+        position: fixed;
+        width:100dvw;
+        z-index: 500;
+    }
+    .sc-main > header > #header {
+        
+    }
+    .sc-main > header > #notification {
+        @apply
+        absolute
+        flex
+        flex-col
+        gap-y-1
+
+        desktop:left-[20%]
+        desktop:right-[20%]
+    }
+    .sc-main > .cabin {
+        position: fixed;
+        width:100dvw;
+        height:100dvh;
+        top:0;
+        left:0;
+        padding-top:90px;
+        padding-bottom: 40px;
+    }
+    .sc-main > .cabin > .main-content {
+        position: relative;
+        @apply
+        px-2
+        flex
+        flex-col
+        gap-y-5
+
+        desktop:px-5
+    }
+    
+    .sc-main > .cabin > .main-content section {
+        @apply
+        relative
+    }
+
+    /* splash screen */
+
+    
+}

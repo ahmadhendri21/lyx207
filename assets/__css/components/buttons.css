@@ -1,0 +1,329 @@
+@layer components {
+
+    .btn{
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1) !important;
+        @apply 
+        flex 
+        gap-2
+        py-3
+        px-4
+        leading-4
+        bg-white 
+        rounded-2x 
+        items-center 
+        overflow-hidden
+        duration-300
+        transition-all
+        ease-linear
+        min-w-max
+
+        hover:bg-sea
+        hover:text-white
+    }
+
+    .btn > .label {
+        @apply
+        whitespace-nowrap
+
+    }
+
+    .btn.active {
+        @apply
+        bg-sea
+        text-white
+    }
+
+    .btn-group {
+        box-shadow: 0 0 0 1px rgba(0,0,0,.1) !important;
+        @apply 
+        flex
+        w-max
+        overflow-hidden
+        rounded-2x 
+    }
+
+    .btn-group > .btn {
+        @apply 
+        rounded-none
+    }
+
+
+    /* dimension */
+    .btn-xs {
+        @apply 
+        p-2
+        text-xs
+        leading-3
+    }
+    .btn-sm {
+        @apply 
+        p-3
+        text-sm
+        leading-3
+    }
+    .btn-lg {
+        @apply 
+        py-3
+        px-5
+        text-lg
+    }
+
+
+
+    /* variant */
+    .btn-carnival,
+    .btn-sea,
+    .btn-forest,
+    .btn-blood {
+        @apply 
+        text-white 
+    }
+    .btn-carnival {
+        @apply 
+        bg-carnival 
+    }
+    .btn-carnival.active {
+        @apply 
+        bg-carnival
+    }
+    .btn-sea {
+        @apply 
+        bg-sea 
+    }
+    .btn-sea.active {
+        @apply 
+        bg-sea
+    }
+    .btn-forest {
+        @apply 
+        bg-forest 
+        hover:bg-forest
+    }
+    .btn-forest.active {
+        @apply 
+        bg-forest
+    }
+    .btn-blood {
+        @apply 
+        bg-blood 
+    }
+    .btn-blood {
+        @apply 
+        bg-blood
+    }
+    
+    .btn-carnival-flat,
+    .btn-sea-flat,
+    .btn-forest-flat,
+    .btn-blood-flat {
+        @apply 
+        text-white
+        hover:bg-white
+    }
+    .btn-carnival-flat {
+        @apply 
+        bg-carnival
+        hover:text-carnival 
+    }
+    .btn-sea-flat {
+        @apply 
+        bg-sea
+        hover:text-sea 
+    }
+    .btn-forest-flat {
+        @apply 
+        bg-forest
+        hover:text-forest 
+    }
+    .btn-blood-flat {
+        @apply 
+        bg-blood
+        hover:text-blood 
+    }
+    
+    .btn-carnival-flat-invert,
+    .btn-sea-flat-invert,
+    .btn-forest-flat-invert,
+    .btn-blood-flat-invert {
+        @apply 
+        bg-white
+        hover:text-white
+    }
+    .btn-carnival-flat-invert {
+        @apply 
+        text-carnival
+        hover:bg-carnival 
+    }
+    .btn-sea-flat-invert {
+        @apply 
+        text-sea
+        hover:bg-sea 
+    }
+    .btn-forest-flat-invert {
+        @apply 
+        text-forest
+        hover:bg-forest 
+    }
+    .btn-blood-flat-invert {
+        @apply 
+        text-blood
+        hover:bg-blood 
+    }
+
+
+    .btn-carnival-flat {
+        @apply bg-carnival border-b-forest text-white drop-shadow-sm ;
+    }
+    
+    .btn-sea-flat {
+        @apply bg-sea border-b-sky text-white drop-shadow-sm ;
+    }
+    
+    .btn-forest-flat {
+        @apply bg-forest border-b-carnival text-white drop-shadow-sm;
+    }
+    
+    .btn-blood-flat {
+        @apply bg-blood border-b-rose text-white drop-shadow-sm ;
+    }
+    
+    
+    .btn-carnival-invert {
+        @apply bg-white border-b-carnival text-carnival hover:btn-carnival-hover-invert;
+    }
+    .btn-carnival-hover-invert {
+        @apply bg-carnival text-white border-b-forest drop-shadow-sm;
+    }
+    
+    .btn-sea-invert {
+        @apply bg-white border-b-sky text-sea hover:btn-sea-hover-invert;
+    }
+    .btn-sea-hover-invert {
+        @apply bg-sea text-white border-b-sky drop-shadow-sm;
+    }
+    
+    .btn-forest-invert {
+        @apply bg-white border-b-carnival text-forest hover:btn-forest-hover-invert;
+    }
+    .btn-forest-hover-invert {
+        @apply bg-forest text-white border-b-carnival drop-shadow-sm;
+    }
+    
+    .btn-blood-invert {
+        @apply bg-white border-b-rose text-blood hover:btn-blood-hover-invert;
+    }
+    .btn-blood-hover-invert {
+        @apply bg-blood text-white border-b-rose drop-shadow-sm;
+    }
+
+    button .label {
+        @apply
+        whitespace-nowrap
+    }
+
+    .label{
+        @apply 
+            group-hover/mtlr:mti-cr
+            group-hover/mtrl:mti-cl
+            group-hover/mtll:mti-cl
+            group-hover/mtrr:mti-cr
+            group-hover/mtud:mti-cu
+            group-hover/mtdu:mti-cd
+            group-hover/mtuu:mti-cu
+            group-hover/mtdd:mti-cd
+            ;
+    }
+    
+    .icon{
+        @apply 
+            group-hover/mtlr:mti-cl
+            group-hover/mtrl:mti-cr
+            group-hover/mtll:mti-cl
+            group-hover/mtrr:mti-cr
+            group-hover/mtdu:mti-cu
+            group-hover/mtud:mti-cd
+            group-hover/mtuu:mti-cu
+            group-hover/mtdd:mti-cd
+            ;
+    }
+
+    .btn-a2{
+        @apply relative text-white flex gap-2 bg-gositus-red items-center rounded-2x px-4 py-3 overflow-hidden transition-all duration-700;
+    }
+    .btn-a2 >.label{
+        @apply font-bold z-10 overflow-ellipsis whitespace-nowrap;
+    }
+    .btn-a2::before {
+        @apply bg-gositus-red-light;
+        width: 100%;
+        height:200px;
+        content: '';
+        position: absolute;
+        left:-120%;
+        transition: left 100ms linear;
+        transform: rotate(0);
+    }
+    .btn-a2::after{
+        @apply bg-gositus-red;
+        width: 100%;
+        height:200px;
+        content: '';
+        position: absolute;
+        left:-120%;
+        transition: left 200ms linear;
+        transform: rotate(0);
+    }
+    .btn-a2:hover{
+        color:#fff;
+    }
+    .btn-a2:hover::before{
+        left:-32%;
+        transform: rotate(25deg);
+    }
+    .btn-a2:hover::after{
+        left:-45%;
+        transform: rotate(25deg);
+    }
+    .btn-a2:hover >.label{
+        animation:  smooth-out-left 200ms linear forwards, 
+                    smooth-in-left 200ms linear forwards 200ms;
+    }
+    .btn-a2:hover >.icon{
+        animation:  smooth-out-right 200ms linear forwards, 
+                    smooth-in-right 200ms linear forwards 200ms;
+    }
+
+
+    .btn-a5 {
+        @apply flex gap-2 rounded-2x shadow-sm cursor-pointer items-center text-xs  hover:px-2 hover:shadow-md hover:text-white hover:bg-gositus-blue;
+    }
+    .btn-a5 > .icon {
+        @apply py-1;
+    }
+    .btn-a5 > .label {
+        @apply py-1;
+    }
+    
+    .btn-a6 {
+        @apply flex gap-2 rounded-2x px-3 shadow-md bg-white items-center text-xs duration-300 overflow-hidden;
+    }
+    .btn-a6:hover {
+        @apply bg-gositus-green text-white;
+    }
+    .btn-a6 > .icon {
+        @apply py-2;
+    }
+    .btn-a6 > .label {
+        @apply py-2 leading-4 ;
+    }
+    .btn-a6:hover >.icon{
+        animation:  closeToLeft 200ms linear forwards, 
+                    openFromLeft 200ms linear forwards 200ms;
+    }
+    .btn-a6:hover >.label{
+        animation:  closeToRight 200ms linear forwards, 
+                    openFromRight 200ms linear forwards 200ms;
+    }
+
+    
+}

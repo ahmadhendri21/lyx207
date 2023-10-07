@@ -1,0 +1,280 @@
+@layer components {
+
+    .datepicker {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+        @apply
+        w-full
+        bg-white
+        rounded-2x
+        overflow-hidden
+        flybox-tablet-shadow
+
+        desktop:w-72
+        desktop:flybox-desktop-shadow
+    }
+
+    .datepicker > .controls {
+        @apply
+        flex
+        justify-between
+        items-center
+        bg-soft-f4
+        shadow-border-inset-xs
+    }
+    
+    .datepicker > .controls > .toggle {
+        @apply
+        bg-transparent
+        font-bold
+        w-full
+        px-4
+        py-3
+        shadow-border-inset-xs
+
+        hover:bg-carnival
+        hover:text-white
+    }
+
+    .datepicker > .grid-items-year,
+    .datepicker > .grid-items-month, 
+    .datepicker > .grid-items-date {
+        @apply
+        grid
+    }
+    .datepicker > .grid-items-year,
+    .datepicker > .grid-items-month 
+    {
+        @apply
+        grid-cols-4
+    }
+    .datepicker > .grid-items-date {
+        @apply
+        grid-cols-7
+    }
+
+    .datepicker .item {
+        @apply
+        flex
+        w-full
+        p-3
+        justify-center
+        items-center
+        transition-all
+        duration-200
+        ease-linear
+        shadow-border-inset-xs
+
+        hover:bg-forest
+        hover:text-white
+
+        desktop:p-2
+    }
+    .datepicker .item.label {
+        @apply
+        bg-soft-f4
+        text-dark-3
+        font-bold
+
+        hover:bg-soft-f4
+        hover:text-dark-3
+
+        desktop:p-2
+    }
+    .datepicker > .grid-items-date > .item {
+        @apply
+        p-2
+    }
+    .datepicker .item.disabled{
+        @apply
+        shadow-border-inset-xs
+        text-dark-c
+
+        hover:bg-soft-f2
+        hover:text-dark-9
+    }
+
+    .datepicker .item.selected{
+        @apply
+        text-white
+        bg-sea
+        font-bold
+    }
+
+    .datepicker .item.outrange{
+        @apply
+        text-dark-e
+        text-xs
+    }
+
+    .datepicker .item.disabled.outrange{
+        @apply
+        text-dark-c
+        bg-white
+
+        hover:bg-soft-f2
+        hover:text-dark-9
+    }
+
+    .datepicker .item.disabled.selected{
+        @apply
+        text-dark-6
+        bg-dark-e
+
+        hover:bg-dark-9
+        hover:text-white
+    }
+    
+    .datepicker .item.today{
+        @apply
+        bg-carnival
+        text-white
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .datepicker_old{
+        @apply w-full p-4 text-gositus-dark sm:w-72;
+    }
+
+    .datepicker_old > .control {
+        @apply flex gap-2 pb-5 px-24 sm:px-12;
+    }
+    
+    .datepicker_old > .control .item {
+        @apply py-2 px-3 font-aileron-light font-bold cursor-pointer text-center duration-500 !border-b border-b-slate-400;
+    }
+    
+    .datepicker_old > .control .item:hover {
+        @apply border-b-sea;
+    }
+    
+    .datepicker_old > .content {
+        @apply relative;
+    }
+    
+    .datepicker_old > .content .option {
+        @apply absolute -top-12 fwx-3 fhx-3 rounded-full flex justify-center items-center !shadow-inset-lg cursor-pointer;
+    }
+    
+    .datepicker_old > .content .option-prev {
+        @apply left-0;
+    }
+    
+    .datepicker_old > .content .option-next {
+        @apply right-0;
+    }
+
+    .datepicker_old > .content .item
+    {
+        @apply py-1 px-1 cursor-pointer flex justify-center items-center;
+    }
+    .datepicker_old > .content .item > .label
+    {
+        @apply font-aileron-light font-bold;
+    }
+
+    .datepicker_old > .content .item.inactive .label
+    {
+        @apply text-gray-300;
+    }
+    
+    .datepicker_old > .content .item.outrange
+    {
+        @apply text-gray-200;
+    }
+
+    .datepicker_old > .content .item:hover > .label
+    {
+        @apply text-gositus-green;
+    }
+
+    .datepicker_old > .content .item.inactive:hover > .label
+    {
+        @apply text-gray-300 animate-none;
+    }
+
+    .datepicker_old > .content > .content-year > .subyear{
+        @apply grid grid-cols-5;
+    }
+    .datepicker_old > .content > .content-year > .subyear > .item{
+        @apply py-2;
+    }
+    .datepicker_old > .content > .content-year > .subyear > .item > .label{
+        @apply text-xs;
+    }
+    .datepicker_old > .content > .content-year > .subyear > .item:nth-child(5n) {
+        @apply border-r-transparent;
+    }
+    
+    .datepicker_old > .content > .content-year > .subyear > .item:nth-last-child(-n+5) {
+        @apply border-b-transparent;
+    }
+
+
+
+    .datepicker_old > .content > .content-month > .submonth {
+        @apply grid grid-cols-3;
+    }
+    .datepicker_old > .content > .content-month > .submonth > .item {
+        @apply py-2;
+    }
+    .datepicker_old > .content > .content-month > .submonth > .item > .label{
+        @apply text-xs;
+    }
+    .datepicker_old > .content > .content-month > .submonth > .item:nth-child(3n) {
+        @apply border-r-transparent;
+    }
+    .datepicker_old > .content > .content-month > .submonth > .item:nth-last-child(-n+3) {
+        @apply border-b-transparent;
+    }
+
+    .datepicker_old > .content > .content-date > .subday {
+        @apply grid grid-cols-7 mb-2;
+    }
+    
+    .datepicker_old > .content > .content-date > .subday > .mark {
+        @apply flex justify-center items-center;
+    }
+
+    .datepicker_old > .content > .content-date > .subday > .mark > .label{
+        @apply py-2 font-aileron-bold;
+    }
+
+
+    .datepicker_old > .content > .content-date > .subdate {
+        @apply grid grid-cols-7;
+    }
+    
+    .datepicker_old > .content > .content-date > .subdate > .item > .label {
+        @apply min-w-[24px] min-h-[24px] max-w-[24px] max-h-[24px] bg-transparent duration-500 text-xs text-center leading-7 rounded-full;
+    }
+
+    .datepicker_old > .content > .content-date > .subdate > .item:hover > .label {
+        @apply bg-gositus-green text-white;
+    }
+    .datepicker_old > .content > .content-date > .subdate > .item.inactive:hover > .label {
+        @apply bg-slate-300;
+    }
+
+    .datepicker_old > .content > .content-date > .subdate > .item:nth-child(7n) {
+        @apply border-r-transparent;
+    }
+    
+    
+    .datepicker_old > .content > .content-date > .subdate > .item:nth-last-child(-n+7) {
+        @apply border-b-transparent;
+    }
+}

@@ -1,0 +1,242 @@
+@layer components {
+
+    @keyframes coverSwap {
+        0% {
+            background-position-y: 0%;
+        }
+        100%{
+            background-position-y: 20%;
+        }
+    }
+    
+    @keyframes transition-left {
+        0%{
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes transition-bottom {
+        0%{
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes transition-table-bottom {
+        0%{
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes transition-table-left {
+        0%{
+            transform: translateX(40px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+
+    @keyframes closeToTop{
+        100%{
+            transform: translate(0,-10px);
+            opacity: 0;
+        }
+    }
+    @keyframes openFromTop{
+        0%{
+            transform: translate(0,-10px);
+            opacity: 0;
+        }
+        100%{
+            transform: translate(0,0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes closeToBottom{
+        100%{
+            transform: translate(0,10px);
+            opacity: 0;
+        }
+    }
+    @keyframes openFromBottom{
+        0%{
+            transform: translate(0,10px);
+            opacity: 0;
+        }
+        100%{
+            transform: translate(0,0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes closeToLeft{
+        100%{
+            transform: translate(-10px,0);
+            opacity: 0;
+        }
+    }
+    @keyframes openFromLeft{
+        0%{
+            transform: translate(-10px,0);
+            opacity: 0;
+        }
+        100%{
+            transform: translate(0,0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes closeToRight{
+        100%{
+            transform: translate(10px,0);
+            opacity: 0;
+        }
+    }
+    @keyframes openFromRight{
+        0%{
+            transform: translate(10px,0);
+            opacity: 0;
+        }
+        100%{
+            transform: translate(0,0);
+            opacity: 1;
+        }
+    }
+
+
+    @keyframes smooth-out-top{
+        100%{
+            transform: translate3d(0,-105%,0);
+            opacity: 0;
+        }
+    }
+    @keyframes smooth-in-bottom{
+        0%{
+            transform: translate3d(0,100%,0) scale(3,3);
+            opacity: 0;
+        }
+        100%{
+            transform: translate3d(0,0,0) scale(1,1);
+            opacity: 1;
+        }
+    }
+    @keyframes smooth-move-down{
+        100%{
+            transform: translate3d(0,100%,0) scale3d(1,2,1);
+            opacity: 0;
+        }
+    }
+    @keyframes smooth-from-up{
+        0%{
+            transform: translate3d(0,-105%,0) scale3d(1,2,1);
+            opacity: 0;
+        }
+        100%{
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes smooth-out-left{
+        100%{
+            transform: translate3d(-105%,0,0);
+            opacity: 0;
+        }
+    }
+    @keyframes smooth-in-left{
+        0%{
+            transform: translate3d(-105%,0,0);
+            opacity: 0;
+        }
+        100%{
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+    }
+    @keyframes smooth-out-right{
+        100%{
+            transform: translate3d(105%,0,0);
+            opacity: 0;
+        }
+    }
+    @keyframes smooth-in-right{
+        0%{
+            transform: translate3d(105%,0,0);
+            opacity: 0;
+        }
+        100%{
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+    }
+
+
+    [transition] {
+        animation-duration: 200ms;
+        animation-fill-mode: backwards;
+        animation-timing-function: linear;
+    }
+    [transition="left"] {
+        animation-name: transition-left;
+    }
+    [transition="bottom"] {
+        animation-name: transition-bottom;
+    }
+    [transition="table-bottom"] {
+        animation-duration: 200ms;
+        animation-name: transition-table-bottom;
+    }
+    [transition="table-left"] {
+        animation-duration: 200ms;
+        animation-name: transition-table-left;
+    }
+
+    .mti-cr {
+        animation:  closeToRight 100ms linear forwards, 
+                    openFromRight 200ms linear forwards 300ms;
+    }
+    .mti-crx {
+        animation:  closeToRight 100ms linear forwards, 
+                    openFromLeft 200ms linear forwards 300ms;
+    }
+    .mti-cl {
+        animation:  closeToLeft 100ms linear forwards, 
+                    openFromLeft 200ms linear forwards 300ms;
+    }
+    .mti-clx {
+        animation:  closeToLeft 100ms linear forwards, 
+                    openFromRight 200ms linear forwards 300ms;
+    }
+    .mti-cu {
+        animation:  closeToTop 100ms linear forwards, 
+                    openFromTop 200ms linear forwards 300ms;
+    }
+    .mti-cux {
+        animation:  closeToTop 100ms linear forwards, 
+                    openFromBottom 200ms linear forwards 300ms;
+    }
+    .mti-cd {
+        animation:  closeToBottom 100ms linear forwards, 
+                    openFromBottom 200ms linear forwards 300ms;
+    }
+    .mti-cdx {
+        animation:  closeToBottom 100ms linear forwards, 
+                    openFromTop 200ms linear forwards 300ms;
+    }
+}

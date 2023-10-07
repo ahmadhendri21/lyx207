@@ -1,0 +1,136 @@
+@layer base {
+
+	@font-face {
+		font-family: "aileron-light";
+		src: url('../webfonts/Aileron-Light.ttf');
+	}
+	@font-face {
+			font-family: "aileron";
+			src: url('../webfonts/Aileron-Regular.ttf');
+	}
+	@font-face {
+			font-family: "aileron-bold";
+			src: url('../webfonts/Aileron-Bold.ttf');
+			font-weight: 700;
+	}
+
+	
+	body{
+		@apply 
+		font-aileron 
+		text-xs 
+		text-dark-6 
+		bg-white 
+		fixed
+			
+		tablet:text-sm
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		@apply 
+		font-bold
+	}
+	h1{
+		@apply 
+		text-3xl
+		leading-9
+	}
+	
+	h2{
+		@apply 
+		text-2xl
+		leading-8
+	}
+	
+	h3{
+		@apply 
+		text-lg
+		leading-6
+
+	}
+	
+	h4{
+		@apply 
+		text-base
+		leading-5
+	}
+
+	input,
+	textarea,
+	select{
+		@apply
+		relative
+		w-full
+		flex-grow
+		font-aileron
+		text-inherit 
+		resize-none
+		bg-transparent
+		outline-none
+	}
+
+	input:focus,
+	textarea:focus,
+	select:focus,
+	button:focus{
+		@apply outline-none;
+	}
+
+	textarea {
+		@apply 
+		my-2
+		scrollbar-hide
+	}
+
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover, 
+	input:-webkit-autofill:focus, 
+	input:-webkit-autofill:active{
+			-webkit-box-shadow: 0 0 0 30px white inset !important;
+			margin:1px;
+			background-color: #fff !important;
+	}
+	input:-webkit-autofill{
+		-webkit-text-fill-color: #333 !important;
+	}
+
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	/* Firefox */
+	input[type=number] {
+		-moz-appearance: textfield;
+	}
+
+
+	button{
+		@apply 
+		outline-none 
+		cursor-pointer 
+	}
+
+	header,
+	footer {
+		@apply
+		w-full
+	}
+
+	table {
+		@apply 
+		table-fixed 
+		min-w-full;
+	}
+
+	th,
+	td{
+		@apply
+		p-3
+	}
+}

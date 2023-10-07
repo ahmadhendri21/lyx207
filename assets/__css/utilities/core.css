@@ -1,0 +1,60 @@
+@layer utilities {
+
+    .pd {
+        @apply
+        p-2
+        desktop:p-4
+    }
+
+    .ugap {
+        @apply
+        gap-2
+        gap-y-2
+        desktop:gap-4
+        desktop:gap-y-4
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .one-line {
+        @apply
+        whitespace-nowrap
+    }
+
+    .icon{
+        font-family: 'Font Awesome 6 Pro';
+        font-weight: 400;
+    }
+    .emoji {
+        @apply fwx-2 fhx-2 bg-cover bg-slate-300;
+    }
+    .rbx {
+        @apply
+        flex
+        justify-start
+        items-start
+        gap-2
+        desktop:gap-4
+    }
+    .rbfx {
+        @apply
+        rbx
+        w-full
+        ;
+    }
+    .cbx {
+        @apply
+        flex
+        flex-col
+        justify-start
+        items-start
+        gap-y-2
+        desktop:gap-y-4
+    }
+    .boxs{
+        @apply
+        p-4
+    }
+}

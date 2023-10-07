@@ -1,0 +1,65 @@
+@layer components {
+
+    /* stbM1 */
+    .stbM1 {
+        @apply
+        gap-5
+        flex
+        flex-col
+        gap-y-5
+
+        desktop:flex-row
+    }
+
+    .wallbox {
+        @apply
+        w-full
+        flex
+        flex-col
+        gap-y-5
+    }
+    
+    .wallbox > .box {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+        @apply
+        bg-white
+        rounded-2x
+        w-full
+        border-t-2
+        border-carnival
+        overflow-hidden
+    }
+
+    .wallbox > .box > .header {
+        box-shadow:0 0 0 1px rgba(0,0,0,.1);
+        @apply
+        flex
+        justify-between
+        items-center
+        p-4
+        bg-soft-f4
+    } 
+
+    .wallbox > .box > .header > .label {
+        @apply
+        flex
+        items-center
+        gap-2
+    }
+
+    .wallbox > .box > .header > .control {
+        @apply
+        flex
+        items-center
+        gap-2
+    }
+    
+    .wallbox > .box > .content {
+        @apply
+        flex
+        flex-col
+        gap-y-5
+        px-4
+        py-8
+    } 
+}

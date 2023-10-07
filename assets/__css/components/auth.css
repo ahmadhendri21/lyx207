@@ -1,0 +1,12 @@
+@layer components {
+    .auth-box {
+
+    }
+
+    .auth-form {
+        @apply
+        flex
+        gap-3
+        items-end
+    }
+}

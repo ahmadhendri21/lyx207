@@ -1,0 +1,42 @@
+@import './fontawesome.min.css';
+@import './regular.min.css';
+
+@import "tailwindcss/base";
+@import "./base/core.css";
+
+@import "tailwindcss/components";
+@import "./components/menu.css";
+@import "./components/menu_desktop.css";
+/* 
+@import "./components/core.css";
+@import "./components/screen.css";
+@import "./components/layout.css";
+@import "./components/pulse.css";
+@import "./components/tab.css";
+@import "./components/motion.css";
+@import "./components/typografi.css";
+@import "./components/buttons.css";
+@import "./components/form.css";
+@import "./components/table.css";
+@import "./components/transition.css";
+@import "./components/flybox.css";
+@import "./components/datepicker.css";
+@import "./components/selectpicker.css";
+@import "./components/tabs.css";
+@import "./components/auth.css";
+@import "./components/pageLabel.css";
+@import "./components/box-counter.css";
+@import "./components/popup.css";
+@import "./components/title.css"; */
+
+@import "tailwindcss/utilities";
+/* @import "./utilities/core.css";
+@import "./utilities/header.css";
+@import "./utilities/login.css";
+@import "./utilities/popup.css";
+@import "./utilities/notification.css";
+@import "./utilities/form.css";
+@import "./utilities/menu.css";
+@import "./utilities/uiux.css";
+@import "./utilities/options.css";
+@import "./utilities/coverbox.css"; */

@@ -1,0 +1,16 @@
+@layer utilities {
+
+    .uiux {
+        @apply
+        p-10
+    }
+
+    .uiux-font {
+
+    }
+
+    .uiux-font-box {
+        @apply
+        pb-4
+    }
+}

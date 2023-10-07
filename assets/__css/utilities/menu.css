@@ -1,0 +1,359 @@
+@layer utilities {
+    
+    .sc-main header {
+
+        @apply 
+        fixed
+        bg-white 
+        shadow-md
+    }
+
+    /* ALL */
+    .landmark {
+        @apply 
+        flex 
+        py-3 
+        pt-2
+    }
+    .landmark > .logo {
+        @apply 
+        relative 
+        flex 
+        items-center 
+        gap-2
+    }
+    .landmark > .logo .gositus-logo {
+        @apply 
+        fwx-4 
+        fhx-4 
+        bg-logo-gositus 
+        bg-cover
+    }
+
+    .landmark > .logo h2 {
+        @apply 
+        text-2xl 
+        font-aileron-bold
+    }
+    
+    .landmark > .logo h2 > span {
+        @apply 
+        font-aileron-light 
+        font-bold 
+        text-sm
+    }
+    
+
+    /* DESKTOP */
+
+    .desktop-onscroll,
+    .desktop-offscroll
+    {
+        @apply
+        flex
+        justify-between
+        items-center
+        gap-5
+        px-4
+    }
+
+    /* desktop onscroll condition */
+    .desktop-onscroll > .landmark > .logo .gositus-logo {
+        @apply 
+        fwx-3 
+        fhx-3
+    }
+    .desktop-onscroll > .aria-menu > ul > li > .item {
+        @apply 
+        py-4
+    }
+    .desktop-onscroll > .profile > .avatar{
+        @apply fwx-3 fhx-3;
+    }
+
+    
+    
+
+
+    /* TABLET */
+    .responsive
+    {
+        @apply
+        relative
+    }
+
+    .burger-toggle {
+        @apply
+        flex
+        min-w-4
+        justify-center
+        items-center
+        text-2xl
+    }
+
+    .burger-menu {
+        height: 100dvh;
+        @apply
+        relative
+    }
+
+    .responsive .header-controls {
+        @apply
+        flex
+        justify-between
+        px-4
+    }
+
+    
+
+
+    /* responsive offscroll condition */
+
+
+   /*  .burger-open {
+        @apply fixed bg-white left-0 right-0 top-0 bottom-0 -z-10 pt-16 px-5 hidden;
+    }
+    .burger-open.active {
+        @apply block;
+    } */
+
+
+    /* AREA LANDMARK */
+    
+
+
+
+
+    /*  AREA PROFILE */
+    .profile {
+        @apply min-w-20 max-w-26 bg-white justify-end items-center flex gap-5;
+    }
+
+    .profile > .info {
+        @apply flex-row justify-end text-right;
+    }
+    .profile h3{
+        @apply font-aileron-lbold text-sm whitespace-nowrap;
+    }
+    .profile h4{
+        @apply font-aileron-lbold text-xs text-forest whitespace-nowrap;
+    }
+
+    .profile > .avatar {
+        @apply fwx-4 fhx-4 bg-dark-d shadow-sm rounded-full;
+    }
+    
+    .burger-menu-profile {
+        background: rgb(252,200,2);
+        background: linear-gradient(49deg, rgba(252,200,2,0.5704656862745099) 0%, rgba(255,190,201,0.5396533613445378) 100%);
+        @apply 
+        relative 
+        py-6
+        bg-soft-f06 
+        flex-row 
+        justify-center 
+    }
+    .burger-menu-profile > .wall {
+        position: absolute;
+        top:0;
+        left:0;
+        bottom: 0;
+        right:0;
+        opacity: .1;
+        background-size: cover;
+        animation: coverSwap 300ms linear forwards;
+        animation-delay: 200ms;
+        background-position-y: 0;
+    }
+
+    .burger-menu-profile > .info {
+        @apply 
+        justify-center 
+        text-center
+    }
+    .burger-menu-profile h3{
+        @apply 
+        whitespace-nowrap 
+        pt-4
+    }
+    .burger-menu-profile h4{
+        @apply 
+        text-xs 
+        whitespace-nowrap
+    }
+
+    .burger-menu-profile .avatar {
+        @apply 
+        fwx-8 
+        fhx-8 
+        bg-white 
+        rounded-full
+        flex 
+        justify-center 
+        items-center 
+        shadow-lg
+        bg-cover
+    }
+    
+    .burger-menu-profile .logout {
+        @apply 
+        absolute 
+        right-5 
+        top-3
+    }
+
+
+    .burger-menu-items {
+        @apply
+        px-4
+        my-5
+    }
+
+    .aria-burger-menu > ul {
+        max-height: calc(100dvh - 320px);
+        @apply
+        grid 
+        grid-cols-2 
+        gap-4
+    }
+    
+    .aria-burger-menu > ul > li {
+        @apply flex justify-center;
+    }
+    .aria-burger-menu > ul > li > button {
+        box-shadow: inset 0 0 1px rgba(0,0,0,.4);
+        @apply 
+            flex
+            rounded-2x
+            justify-start
+            items-center
+            relative
+            overflow-hidden
+            cursor-pointer
+            w-full
+            gap-2
+            p-4
+            text-dark-3
+            duration-200
+            
+            before:bg-sea 
+            before:w-0 
+            before:h-[2px] 
+            before:absolute 
+            before:content-[''] 
+            before:bottom-0 
+            before:left-1/2 
+            before:duration-200
+            
+            
+            hover:before:w-full 
+            hover:before:absolute 
+            hover:before:left-0
+    }
+    
+    .aria-burger-menu > ul > li > a.active {
+        @apply bg-soft-f06 px-6 before:bg-forest before:w-full before:left-0;
+    }
+
+    .aria-burger-menu > ul > li > button > .icon {
+        @apply 
+            text-lg
+            duration-200
+            ;
+    }
+
+    .aria-burger-menu > ul > li > button > .label {
+        @apply 
+            duration-200
+            pt-[3px]
+            ;
+    }
+
+    
+
+    
+
+
+
+    /* AREA MENU */
+    
+
+    
+
+
+
+    /* .burger {
+        @apply
+            relative
+            z-120
+            text-xl
+            fwx-3
+            fhx-3
+            bg-white
+            text-dark-3
+            cursor-pointer
+    }
+
+    .burger > .nt {
+        @apply
+            fwx-3
+            fhx-3
+            flex
+            justify-center
+            items-center
+            absolute
+            duration-500
+            origin-center;
+    }
+    
+    .burger > .nt.nt-close {
+        @apply 
+            rotate-0
+            opacity-100
+            ;
+    }
+    
+    .burger > .nt.nt-open {
+        @apply 
+            -rotate-45
+            opacity-0
+            ;
+    }
+
+    .burger.active > .nt.nt-close {
+        @apply 
+            rotate-90
+            opacity-0
+            ;
+    }
+    
+    .burger.active > .nt.nt-open {
+        @apply 
+            rotate-45
+            opacity-100
+            ;
+    } */
+    
+
+    .grd-0 {
+        background: rgb(252,200,2);
+        background: linear-gradient(49deg, rgba(252,200,2,0.5704656862745099) 0%, rgba(255,190,201,0.5396533613445378) 100%);
+    }
+
+    .grd-1 {
+        background: rgb(255,219,169);
+        background: linear-gradient(63deg, rgba(255,219,169,1) 0%, rgb(244, 207, 88) 100%);
+    }
+    .grd-2 {
+        background: rgb(218,207,251);
+        background: linear-gradient(63deg, rgba(218,207,251,1) 0%, rgb(86, 185, 230) 100%);
+    }
+    .grd-3 {
+        background: rgb(192,241,201);
+        background: linear-gradient(63deg, rgba(192,241,201,1) 0%, rgba(195,241,203,1) 100%);
+    }
+    .grd-4 {
+        background: rgb(254,186,182);
+        background: linear-gradient(63deg, rgba(254,186,182,1) 0%, rgba(254,201,213,1) 100%);
+    }
+}

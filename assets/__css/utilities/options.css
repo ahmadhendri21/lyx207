@@ -1,0 +1,32 @@
+@layer utilities {
+
+    .option-gender {
+        @apply
+        flex
+        gap-2
+    }
+
+
+    .phone-region-toggle {
+        @apply
+        relative
+        max-w-6
+    }
+    .option-phone-code {
+        @apply
+        flex
+        gap-2
+        justify-center
+        items-center
+    }
+    .option-phone-code > .flag {
+        @apply
+        w-6
+        h-4
+        bg-cover
+    }
+    .option-phone-code > .label {
+        @apply
+        text-dark-6
+    }
+}

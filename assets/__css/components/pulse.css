@@ -1,0 +1,28 @@
+@layer components {
+    .pulse {
+        @apply min-h-2 rounded-xl animate-pulse bg-dark-d;
+    }
+    
+    .pulse-sm {
+        @apply min-h-1;
+    }
+    
+    .pulse-lg {
+        @apply min-h-3;
+    }
+
+    table.load {
+        @apply shadow-none opacity-60;
+    }
+    table.load {
+        @apply shadow-none;
+    }
+    
+    table.load thead tr th{
+        @apply bg-dark-e;
+    }
+
+    table.load tbody tr:nth-child(even) td{
+        @apply bg-soft-f8;
+    }
+}

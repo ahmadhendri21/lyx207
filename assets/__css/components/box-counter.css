@@ -1,0 +1,31 @@
+@layer components {
+    .counter-boxs {
+        @apply
+        flex
+        gap-2
+    }
+
+    .counter-boxs > .box {
+        @apply
+        p-4
+        rounded-2x
+        shadow-border-inset
+        flex
+        flex-col
+        gap-y-2
+        w-full
+        bg-soft-f4
+        text-dark-6
+    }
+    
+    .counter-boxs > .box > .digits {
+        @apply
+        text-center
+        font-aileron-bold
+        text-2xl
+    }
+    .counter-boxs > .box > .label {
+        @apply
+        text-center
+    }
+}

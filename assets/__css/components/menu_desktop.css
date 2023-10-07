@@ -1,0 +1,84 @@
+@layer components {
+    
+    .desktop-onscroll,
+    .desktop-offscroll
+    {
+        @apply
+        flex
+        justify-between
+        items-center
+        gap-5
+        px-4
+    }
+
+    .aria-menu {
+        @apply 
+        bg-white 
+        flex relative 
+        flex-grow 
+        overflow-x-auto 
+        scrollbar-hide
+    }
+    
+    .aria-menu > ul {
+        @apply
+        flex
+        flex-nowrap
+        gap-0
+    }
+    
+    .aria-menu > ul > li {
+        @apply 
+        flex 
+        justify-center
+    }
+    
+    .aria-menu > ul > li > .item {
+        @apply 
+        flex
+        justify-start
+        items-center
+        relative
+        overflow-hidden
+        cursor-pointer
+        gap-1
+        py-6
+        px-3
+        text-dark-3
+        duration-200
+        
+        before:bg-sea 
+        before:w-0 
+        before:h-1 
+        before:absolute 
+        before:bottom-0 
+        before:left-1/2 
+        before:duration-200
+        
+        hover:before:w-full 
+        hover:before:absolute 
+        hover:before:left-0
+    }
+    
+    .aria-menu > ul > li.active-menu > .item {
+        @apply 
+        bg-soft-f4 
+        px-6 
+
+        before:bg-forest 
+        before:w-full 
+        before:left-0
+    }
+
+    .aria-menu > ul > li > .item > .icon {
+        @apply 
+        text-lg
+        duration-200
+    }
+
+    .aria-menu > ul > li > .item > .label {
+        @apply 
+        duration-200
+        pt-[3px]
+    }
+}

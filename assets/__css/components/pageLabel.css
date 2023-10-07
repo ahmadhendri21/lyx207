@@ -1,0 +1,34 @@
+@layer components {
+    .msdM1 {
+        @apply
+        relative
+        w-full
+        flex
+        flex-col
+        gap-y-4
+        justify-start
+        items-center
+
+        desktop:flex-row
+    }
+
+    .msdM1-rvl{
+        @apply
+        w-full
+        flex
+        justify-start
+    }
+    
+    .msdM1-rvr{
+        @apply
+        w-full
+        flex
+        justify-end
+    }
+
+    .msdM1 .main-title {
+        @apply
+        flex
+        gap-2
+    }
+}

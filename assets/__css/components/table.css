@@ -1,0 +1,443 @@
+@layer components {
+
+    .datatable {
+        @apply
+        relative
+        flex
+        flex-col
+        gap-y-4
+    }
+    
+    .datatable > .tablehead{
+        z-index: 400;
+        @apply
+        sticky
+        bg-white
+    }
+
+    .datatable > .loader {
+        position: relative;
+        width: 100%;
+        height:2px;
+        background-color: #fff;
+        margin-bottom:2px;
+        overflow: hidden;
+    }
+    
+    .datatable > .loader.load {
+        background-color: #fff;
+    }
+    
+    .datatable > .loader.load::before {
+        position: absolute;
+        content:'';
+        width: 100px;
+        height:4px;
+        top:0;
+        left:0;
+        
+        @apply
+        bg-forest
+    }
+
+    .tablebox{
+        @apply 
+        w-full 
+        bg-white 
+        overflow-scroll 
+        scrollbar-hide 
+        rounded-2x 
+    }
+
+    .tablebox .sticky{
+        position: relative;
+        z-index: 380;
+    }
+    
+    .tablebox.allow-sticky .sticky{
+        position: sticky;
+    }
+
+    .table-gs {
+        
+    }
+    
+    .table-gs .slice{
+        @apply
+        hidden
+    }
+
+    .table-gs > thead {
+        @apply
+        bg-sea
+        text-white
+    }
+    
+    .table-gs th,
+    .table-gs td {
+        position: relative;
+        box-shadow: inset 0 0 0 1px rgba(172, 171, 171, 0.1);
+        transition: all 200ms linear;
+    }
+    
+    .table-gs th {
+        box-shadow: 0 0 0 1px rgba(2, 38, 105, 0.1);
+        transition: all 200ms linear;
+    }
+    
+    .table-gs > thead > tr > th {
+        @apply
+        bg-sea
+    }
+
+
+    .table-gs > tbody {
+
+    }
+
+    .table-gs > tbody > tr:nth-child(even) > td {
+        @apply
+        bg-soft-f06
+    }
+    .table-gs > tbody > tr:nth-child(odd) > td {
+        @apply
+        bg-white
+    }
+    
+    .table-gs > tbody > tr:hover > td {
+        @apply
+        bg-carnival
+    }
+
+
+
+    .table-gs th.asc::before,
+    .table-gs th.desc::before {
+        position: absolute;
+        width: 20px;
+        height:20px;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 400;
+        content: '';
+        font-size: 10px;
+        color: #ffffff;
+        top:0;
+        left:0;
+        text-align: center;
+    }
+    
+    .table-gs th.asc::before {
+        content: '\f063';
+        background: linear-gradient(to bottom right, #fa7774 0%, #fa7774 50%, transparent 50%, transparent 100%);
+    }
+    
+    .table-gs th.desc::before {
+        content: '\f062';
+        background: linear-gradient(to bottom right, #8fcb09 0%, #8fcb09 50%, transparent 50%, transparent 100%);
+    }
+
+
+
+
+
+
+
+
+
+
+    /* component */
+    table .flat {
+        @apply flex justify-start items-start;
+    }
+   
+    table .flat > .label {
+        @apply 
+        pt-1
+        whitespace-nowrap
+    }
+    
+    table .flat.flat-link {
+        @apply border-b border-b-transparent duration-300 hover:border-b-sea cursor-pointer;
+    }
+
+    table .flat.gender-male {
+        @apply
+            text-sea
+            hover:border-b-sea
+    }
+    
+    table .flat.gender-female {
+        @apply
+            text-blood
+            hover:border-b-blood
+            ;
+    }
+
+
+
+
+    /* table history */
+    .table-history {
+        @apply
+        relative
+        bg-white
+    }
+    .table-history > thead {
+        @apply
+        z-90
+    }
+
+    .table-history > thead > tr {
+        @apply
+        bg-white
+    }
+    
+    .table-history > thead > tr > th {
+        @apply
+        bg-white
+        p-2
+        text-left
+    }
+    
+    .table-history > tbody > tr > td {
+        @apply
+        p-2
+    }
+    
+    .table-history .bolder {
+        @apply
+        font-bold
+    }
+    
+    .table-history .rcontent {
+        @apply
+        text-right
+    }
+    
+    .table-history .point-correction {
+        @apply
+        py-1
+        px-2
+        leading-4
+        rounded-2x
+        text-white
+    }
+    .table-history .point-date {
+        @apply
+        flex
+        gap-2
+    }
+    
+    .table-history .stabilow {
+        @apply
+        relative
+        flex
+        gap-2
+        px-2
+        py-1
+        rounded-2x
+        text-white
+    }
+    
+    .table-history .stabilow.warning {
+        @apply
+        bg-carnival
+    }
+    .table-history .stabilow.success {
+        @apply
+        bg-forest
+    }
+    .table-history .stabilow.error {
+        @apply
+        bg-blood
+    }
+
+    .table-history .plus {
+        @apply
+        bg-forest
+    }
+    
+    .table-history .minus {
+        @apply
+        bg-blood
+    }
+
+
+
+    /* 
+    .datatable.zen {
+        @apply
+        fixed
+        z-300
+        left-0
+        top-0
+        w-screen
+        h-screen
+        bg-black
+        bg-opacity-80
+    }
+
+    .datatable.zen > .tableset {
+        @apply
+        relative
+        top-40
+        w-full
+        p-6
+    } */
+
+    /* table .col-loader {
+        @apply fhx-2 bg-dark-e animate-pulse rounded-xl;
+    }
+    table th > .col-loader {
+        @apply bg-dark-c;
+    }
+
+    table.ta1 {
+        @apply table-fixed min-w-full;
+    }
+    table.ta1 thead{
+
+    }
+    table.ta1 th{
+        @apply p-0 bg-sea text-white shadow-inset-md font-normal relative;
+    }
+    table.ta1 th > .label
+    {
+        @apply p-3;
+    }
+    table.ta1 th [tablesort]{
+        @apply relative cursor-pointer block;
+    }
+    table.ta1 th [tablesort]:before{
+        position: absolute;
+        width: 20px;
+        height:20px;
+        font-family: "Font Awesome 6 Pro";
+        font-weight: 400;
+        content: '';
+        font-size: 10px;
+        color: #ffffff;
+        text-shadow: -1px -1px 1px rgba(0,0,0,.8);
+        top:0;
+        left:0;
+        text-align: center;
+    }
+    table.ta1 th [sort-mode="asc"]:before{
+        content: '\f063';
+        background: linear-gradient(to bottom right, #fa7774 0%, #fa7774 50%, transparent 50%, transparent 100%);
+    }
+    table.ta1 th [sort-mode="desc"]:before{
+        content: '\f062';
+        background: linear-gradient(to bottom right, #8fcb09 0%, #8fcb09 50%, transparent 50%, transparent 100%);
+    }
+    table.ta1 td{
+        @apply p-3 w-min bg-white shadow-inset-e4 transition-colors ease-linear;
+    }
+
+    td{
+        @apply
+        group-even:bg-soft-f06
+        group-hover:bg-carnival 
+        group-even:group-hover:bg-carnival 
+    }
+
+    .slicer {
+        @apply flex flex-wrap gap-2 pb-5 text-xs;
+    }
+
+    .slicer > .item {
+        @apply flex gap-2 bg-white px-3 py-2 rounded-2x cursor-pointer shadow-md;
+    }
+
+    .slicer > .item:hover {
+        @apply bg-gositus-orange text-white duration-500;
+    }
+
+    .slicer > .item.active {
+        @apply bg-gositus-green text-white;
+    }
+    
+
+
+    .slicer > .items {
+        @apply flex gap-2 bg-white cursor-pointer rounded-2x overflow-hidden shadow-md;
+    }
+
+    .slicer > .items:hover {
+        @apply bg-gositus-orange text-white duration-500;
+    }
+    
+    .slicer > .items > .label{
+        @apply flex gap-2 px-3 py-2;
+    }
+    .slicer > .items > .cast{
+        @apply hidden;
+    }
+    
+    .slicer > .items > .cast.active{
+        @apply flex;
+    }
+
+    .slicer > .items > .cast.active > .item{
+        @apply flex px-3 py-2 duration-500;
+    }
+    
+    .slicer > .items > .cast.active > .item:hover{
+        @apply bg-gositus-green;
+    }
+
+    .slicer > .items > .cast.active > .item.active{
+        @apply bg-gositus-green text-white;
+    }
+
+
+    
+
+
+    table .ischeckbox {
+        @apply 
+            fwx-2
+            fhx-2
+            rounded-2x
+            shadow-inset-2-lg
+            bg-white
+            cursor-pointer
+            flex
+            justify-center
+            items-center
+            duration-300
+            text-transparent;
+    }
+    table .ischeckbox.active {
+        @apply 
+            bg-forest
+            text-white
+            shadow-none;
+    }
+
+    table .flat {
+        @apply flex justify-start items-start;
+    }
+   
+    table .flat > .label {
+        @apply pt-1;
+    }
+    
+    table .flat.flat-link {
+        @apply border-b border-b-transparent duration-300 hover:border-b-sea cursor-pointer;
+    }
+
+    table .flat.gender-male {
+        @apply
+            text-sea
+            hover:border-b-sea
+            ;
+    }
+    
+    table .flat.gender-female {
+        @apply
+            text-blood
+            hover:border-b-blood
+            ;
+    } */
+}

@@ -1,0 +1,14 @@
+
+@layer components {
+    .tab-element {
+        @apply relative;
+    }
+
+    .tab-element .content {
+        @apply hidden;
+    }
+    
+    .tab-element .content.active {
+        @apply block;
+    }
+}

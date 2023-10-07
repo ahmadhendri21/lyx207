@@ -1,0 +1,390 @@
+@layer components {
+
+    .fields {
+        @apply
+        flex
+        flex-col
+        gap-4
+
+        desktop:flex-row
+    }
+
+    .fields.colend {
+        @apply
+        items-end
+    }
+
+    .grid-2 {
+        @apply
+        grid
+        grid-cols-1
+        gap-4
+
+        desktop:grid-cols-2
+    }
+
+    .grid-4 {
+        @apply
+        grid
+        grid-cols-1
+        gap-4
+
+        desktop:grid-cols-4
+    }
+
+    .fieldset {
+        @apply
+        flex
+        flex-col
+        gap-y-3
+        w-full
+    }
+    
+    .fieldset.skipfull {
+        @apply
+        w-auto
+        desktop:fwx-30
+    }
+
+    .fieldset > .label {
+        @apply 
+        block 
+		font-bold
+
+		group-error:text-gositus-red
+    }
+    .fieldset > .input {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+        @apply 
+        relative
+        flex 
+        w-full
+        gap-2 
+        px-4
+        rounded-2x 
+        overflow-hidden 
+        bg-white
+        text-inherit
+        min-h-4
+    }
+    .fieldset > .input .icon {
+        @apply
+        self-center
+    }
+    .fieldset .input > .inps {
+        @apply
+        flex 
+        flex-grow
+        items-center
+    }
+    .fieldset > .input > .flag{
+        @apply 
+        w-5 
+        h-4 
+        shadow-inset-lg 
+        bg-cover 
+        bg-flag-indonesia
+    }
+    .fieldset > .input::before {
+        position: absolute;
+        width: 0;
+        height: 1px;
+        content: '';
+        left:50%;
+        bottom: 0;
+        z-index: 1;
+        transition: all 100ms linear;
+        @apply bg-gositus-blue;
+    }
+
+    /* .fieldset > .option {
+        @apply 
+        invisible 
+        bg-white 
+        opacity-0 
+        absolute 
+        top-28 
+        duration-200 
+        z-50 
+        rounded-2x
+    } */
+
+    .fieldset > .reports {
+        @apply
+        relative
+    }
+    .fieldset > .reports > .report {
+        @apply
+        pb-2
+        last:pb-0
+    }
+
+    .group-note {
+        @apply 
+        relative
+        flex
+        flex-col
+        gap-y-1
+    }
+    .note {
+        @apply 
+        flex 
+        gap-2 
+        text-xs 
+        text-dark-9 
+    }
+
+
+
+    /* on focus .fieldset */
+    .fieldset.focus > .label {
+        animation:  closeToRight 200ms linear forwards, 
+                    openFromRight 200ms linear forwards 200ms;
+    }
+    .fieldset.focus > .input::before {
+        left:0;
+        width: 100%;
+    }
+    .fieldset.focus > .option {
+        @apply 
+        visible 
+        opacity-100 
+        top-full 
+        shadow-md
+    }
+
+
+
+
+
+    /* on error .fieldset */
+    .fieldset.error {
+        @apply 
+        text-gositus-red
+    }
+    .fieldset.error > .input::before {
+        left:0;
+        width: 100%;
+        @apply 
+        bg-gositus-red;
+    }
+
+
+
+
+
+    /* on disabled .fieldset */
+    .fieldset.disabled {
+        @apply 
+        text-dark-9
+    }
+
+    .fieldset.disabled > .label {
+        animation: none;
+    }
+
+    .fieldset.disabled > .input {
+        @apply 
+        border-dark-d
+        bg-dark-e
+        shadow-none
+    }
+    
+    .fieldset.disabled > .input::before {
+        display: none;
+    }
+    
+
+    
+
+
+
+
+
+    
+    .fieldset > .input-file {
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,.1);
+        @apply 
+        relative 
+        w-full 
+        bg-white 
+        rounded-2x 
+        overflow-hidden
+    }
+
+    .fieldset > .input-file > .loading {
+        z-index:6;
+        position: absolute;
+        top: 0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        display: none;
+    }
+    .fieldset > .input-file > .display {
+        position: relative;
+        display: block;
+        width:100%;
+        padding-top: 56.25%;
+        overflow: hidden;
+        @apply
+        bg-cover 
+    }
+    
+    .fieldset > .input-file > .loading.isuploading {
+        background-color: rgba(255,255,255,.5);
+        display: block;
+        cursor: not-allowed;
+        @apply
+        animate-pulse
+    }
+
+    .fieldset > .input-file > .control {
+        z-index:7;
+        @apply 
+        absolute
+        -bottom-12
+        w-full
+        flex 
+        justify-between 
+        items-center 
+        transition-all
+        ease-linear
+        opacity-0
+        bg-sea
+    }
+    
+    .fieldset > .input-file:hover > .control {
+        @apply 
+        -bottom-0
+        opacity-100
+    }
+    
+    .fieldset > .input-file > .control > button {
+        @apply 
+        w-full
+        bg-transparent
+        flex 
+        gap-2
+        justify-center 
+        items-center 
+        text-white
+        text-sm
+        p-3
+    }
+
+
+    
+
+    
+
+    
+
+
+
+    
+
+    
+
+    
+    
+
+    
+    
+
+
+    
+
+    
+
+    .form-.label {
+        @apply relative flex gap-2 mb-6 py-2 items-start leading-6;
+    }
+    .form-.label .icon {
+        @apply text-sm;
+    }
+    .form-.label::before {
+        position: absolute;
+        bottom:0;
+        content: '';
+        width:30px;
+        height: 1px;
+        border-radius: 2px;
+        @apply bg-forest;
+    }
+    
+
+
+
+    .form-datatable {
+        @apply
+        pt-4
+    }
+
+    .form-datatable .fields {
+
+    }
+
+    .form-datatable .fields .fieldset {
+        @apply
+        desktop:max-w-20
+    }
+    
+    
+    
+    
+    
+
+    
+
+
+
+    
+    .form-a1 .area {
+        @apply 
+        relative 
+        w-full
+        mb-4
+    }
+    
+    .form-a1 .area.notmax {
+        @apply relative w-auto;
+    }
+    
+    .form-a1 .area > .fields-group {
+        @apply 
+            bg-soft-f8 
+            p-4 
+            border 
+            border-dark-e 
+            tablet:my-0 
+            border-t-2 
+            border-t-forest 
+            rounded-lg 
+            overflow-hidden
+            !mb-4
+
+            tablet:border-t 
+    }
+    
+    .form-a1 .fields {
+        @apply flex gap-2 pb-8;
+    }
+    .form-a1 .fields:last-child {
+        @apply flex gap-2 pb-2;
+    }
+
+    .form-a1 .grid-4 {
+        @apply 
+        grid
+        grid-cols-4
+    }
+    
+    .form-a2 .area {
+        @apply relative w-full gap-2 tablet:flex;
+    }
+    
+    .form-a2 .fields {
+        @apply flex gap-2 pb-4;
+    }
+}

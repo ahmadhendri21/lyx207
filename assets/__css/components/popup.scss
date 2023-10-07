@@ -1,0 +1,279 @@
+@layer components {
+
+    .popup-a1 {
+        position: fixed;
+        z-index: 1000;
+        top:0;left:0;
+        width:100dvw;
+        height:100dvh;
+        visibility: hidden;
+        background-image: linear-gradient(0deg, rgba(51,51,51,.6) 0%, rgba(51,51,51,.8) 70%);
+        transition: all 200ms linear;
+        opacity: 0;
+        @apply
+        flex
+        justify-center
+        items-end
+
+        desktop:items-center;
+
+        .popup-a1-skin {
+            transition: all 200ms linear;
+            @apply
+            w-full
+            bg-white
+            opacity-0
+            cursor-default
+            popup-a1-mobile-skin
+
+            desktop:w-auto
+            desktop:min-w-30
+            desktop:shadow-2xl
+            desktop:rounded-2x
+            desktop:popup-a1-desktop-skin;
+        }
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            .popup-a1-skin {
+                @apply
+                opacity-100
+                popup-a1-mobile-skin-active
+                desktop:popup-a1-desktop-skin-active;
+            }
+        }
+    }
+
+    
+
+    .popbox {
+        @apply
+        flex
+        flex-col
+        shadow-border-inset
+        desktop:min-w-[400px];
+        .header {
+            @apply
+            flex
+            justify-between
+            shadow-border-inset
+            p-2
+            bg-dark-e
+            desktop:p-4;
+            .lpx,.rpx {
+                @apply
+                flex
+                flex-col
+                ;
+            }
+            .lpx{
+                .title{
+                    @apply
+                    flex
+                    text-base
+                    font-bold
+                    gap-2;
+                }
+            }
+        }
+        .content {
+            max-height: 60dvh;
+            overflow-y: scroll;
+            @apply
+            relative
+            flex
+            flex-col
+            gap-y-2
+            scrollbar-hide
+
+            desktop:gap-y-4;
+        }
+        .footer {
+            @apply
+            flex
+            justify-between
+            shadow-border-inset
+            p-2
+            desktop:p-4;
+        }
+
+        .correction-block {
+            @apply
+            flex
+            gap-4
+            justify-start;
+            .manual {
+                min-width: 140px;
+                @apply
+                flex
+                flex-col
+                justify-center
+                gap-y-4;
+                .values{
+                    .counter{
+                        @apply
+                        flex
+                        flex-col
+                        items-center;
+                        h1{
+                            font-size: 40px;
+                            line-height: 60px;
+                        }
+                        h3{
+                            @apply
+                            text-sm;
+                        }
+                    }
+                }
+                .toggle{
+                    @apply
+                    flex
+                    justify-center;
+                    button{
+                        @apply
+                        py-2
+                        px-4
+                        hover:bg-carnival;
+                    }
+                }
+            }
+            .quick{
+                @apply
+                flex
+                flex-col
+                gap-y-2;
+                .label{
+                    @apply
+                    font-bold;
+                }
+            }
+        }
+    }
+
+
+    /* popup change avatar */
+    .avatars {
+        @apply
+        p-2
+        grid
+        grid-cols-8
+        gap-2
+
+        desktop:p-4
+        desktop:gap-3
+        desktop:w-[500px];
+    }
+
+    .avatars > .item {
+        padding-top:100%;
+        border-radius: 50%;
+        background-size: cover;
+        cursor: pointer;
+        transition: all 300ms linear;
+        filter: grayscale(80%);
+    }
+    
+    .avatars > .item:hover {
+        box-shadow: 0 0 0 5px rgba(48, 89, 159, 0.2);
+        filter: grayscale(0);
+    }
+    
+    .avatars > .item.active {
+        box-shadow: 0 0 0 5px rgba(36, 108, 233, 0.5);
+        filter: grayscale(0);
+    }
+
+    /* popup ktp npwp */
+    .spy-image {
+        padding-top:56.25%;
+        background-size: cover;
+        @apply
+        w-full;
+    }
+
+
+
+
+
+    /* popup historybox */
+    .history-box {
+        @apply
+        p-2
+        flex-col
+        gap-y-2
+
+        desktop:p-4
+        desktop:gap-y-4;
+    }
+
+    .history-box > .history-correction {
+        @apply
+        flex
+        flex-col
+        gap-y-4;
+    }
+
+    .history-box > .history-correction > .quick-input {
+        @apply
+        flex
+        gap-2
+        justify-start;
+    }
+    
+    .history-box > .history-correction > .manual-input {
+        @apply
+        flex
+        flex-col
+        gap-y-4;
+    }
+    
+    .history-box > .history-correction > .manual-input > .control {
+        @apply
+        flex
+        justify-start
+        shadow-border-inset-xs
+        rounded-2x
+        overflow-hidden
+        max-w-max;
+    }
+    .history-box > .history-correction > .manual-input > .control > .item{
+        @apply
+        flex
+        shadow-border-inset-xs;
+    }
+    .history-box > .history-correction > .manual-input > .control > .item > input {
+        width:80px;
+        @apply
+        text-lg
+        p-2
+        text-center;
+    }
+    .history-box > .history-correction > .manual-input > .control > .item > button {
+        @apply
+        px-4
+        hover:bg-carnival;
+    }
+
+    .history-box > .history-correction > .manual-input > .field {
+        @apply
+        flex
+        justify-start
+        shadow-border-inset
+        rounded-2x
+        overflow-hidden;
+    }
+    
+    .history-box > .history-correction > .manual-input > .field > textarea {
+        @apply
+        p-2
+        m-0;
+    }
+    
+    .history-box > .history-table {
+        max-height: 40dvh;
+        @apply
+        overflow-y-scroll
+        scrollbar-hide;
+    }
+}

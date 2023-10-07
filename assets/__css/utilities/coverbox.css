@@ -1,0 +1,55 @@
+@layer utilities {
+    
+    .coverbox {
+        @apply
+        relative
+        flex
+        flex-col
+        p-14
+        gap-4
+        justify-between
+        items-center
+        overflow-hidden
+
+        desktop:flex-row
+    }
+
+    .coverbox > .avatar-mirror {
+        position: absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom: 0;
+        background-size: cover;
+        z-index: 1;
+        opacity: .2;
+        @apply
+        desktop:-top-1/4
+        desktop:left-1/2
+    }
+    
+    .coverbox > .avatar-data {
+        z-index: 2;
+    }
+    
+    .coverbox > .avatar-data > .user-avatar {
+        width:120px;
+        padding-top:100%;
+        @apply
+        bg-cover
+        bg-transparent
+        rounded-full
+    }
+
+    .coverbox > .personal-data {
+        z-index: 3;
+        @apply
+        text-white
+        drop-shadow-md
+        desktop:flex-grow
+    }
+    
+    .coverbox > .change-data {
+        z-index: 3;
+    }
+}

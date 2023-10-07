@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>layout</title>
+        <link rel="stylesheet" href="http://localhost/layout/public/css/style.css" />
+    </head>
+    <body>
+        <div id="gositus-apps">
+            <div class="sc-main">
+                <header>
+                    <div id="header">
+
+                        <div menu-type="desktop" class="desktop-offscroll">
+                            <div  class="landmark">
+                                <a href="#" class="logo" jumper="dashboard">
+                                    <div>
+                                        <div motion class="mt-left gositus-logo"></div>
+                                    </div>
+                                    <h2 motion class="mt-right">Gositus<span>/ERP</span></h2>
+                                </a>
+                            </div>
+                            <div class="aria-menu">
+                                <ul>
+                                    <li role="button" class="item-menu" active-menu="active">
+                                        <div class="item">
+                                            <div class="">💰</div>
+                                            <div class="label">Invoice</div>
+                                        </div>
+                                    </li>
+                                    <li role="button" class="item-menu active-menu" active-menu="active">
+                                        <div class="item">
+                                            <div class="">💰</div>
+                                            <div class="label">Invoice</div>
+                                        </div>
+                                    </li>
+                                    <li role="button" class="item-menu" active-menu="active">
+                                        <div class="item">
+                                            <div class="">💰</div>
+                                            <div class="label">Invoice</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="profile">
+                                <div class="info">
+                                    <h3 jumperclip="user/profile" pass-data="sess_name" class=" cursor-pointer">Ahmad Hendri</h3>
+                                    <h4 pass-data="sess_divisi" class="">Web Programming</h4>
+                                </div>
+                                <div jumperclip="user/profile" pass-style="sess_avatar" class=" avatar-sm cursor-pointer"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="notification"></div>
+                </header>
+                <div class="cabin scroller" wallscreen="apps"></div>
+                <div class="cabin scroller" wallscreen="apps">
+                    
+
+                    <div class="main-content">
+
+                        <section>
+                            <div class="msdM1">
+                                <div class="msdM1-rvl">
+                                    <div class="main-title">
+                                        <h2>User List</h2>
+                                    </div>
+                                </div>
+                                <div class="msdM1-rvr">
+                                    <div class="btn-group">
+                                        <button jumperclip="user/add" class="group/mtrl btn btn-sm active">
+                                            <div class="label">Add New User</div>
+                                            <div class="icon fa-plus"></div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    
+                        <section id="datatable-user">
+                            
+                            <div gs-table="user" class="datatable">
+
+                                <div class="tablehead">
+                                    <div class="tabs">
+                                        <div gs-tab="tabletab" class="flex tab-header">
+                                            <div class="btn-group">
+                                                <button tab-control="screen2" class="tab-header-item btn btn-sm btn-sea">
+                                                    <div class="icon fa-search"></div>
+                                                    <div class="label">Search</div>
+                                                </button>
+                                                <button clean-table-search class="tab-header-item btn btn-sm btn-sea">
+                                                    <div class="icon fa-bars"></div>
+                                                    <div class="label">Show All</div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div gs-tab="tabletab" class="tab-content">
+                                
+                                            <div table-search gs-form="search_user" tab-content="screen2" class="tab-content-item ">
+                                                <div class="form-datatable">
+                                                    <div class="fields">
+                                                        <div fieldset class="fieldset">
+                                                            <div class="label">Nama</div>
+                                                            <div class="input">
+                                                                <input
+                                                                    type="text"
+                                                                    name="nama"
+                                                                    filter-table="nama"
+                                                                    />
+                                                            </div>
+                                                        </div>
+                                                        <div fieldset class="fieldset">
+                                                            <div class="label">Work Email</div>
+                                                            <div class="input">
+                                                                <span class="icon fa-envelope"></span>
+                                                                <input
+                                                                    type="text"
+                                                                    name="work_email"
+                                                                    filter-table="email"
+                                                                    />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="loader load"></div>
+                                </div>
+                            
+                            
+                                <div class="tablebox">
+                                    <table class="table-gs">
+                                        <thead class="sticky top-0">
+                                            <tr class="">
+                                                <th class="fwx-4 sticky stick-0">No.</th>
+                                                <th class="fwx-2"></th>
+                                                <th class="fwx-5 tablet:fwx-6" slice-item="pic"></th>
+                                                <th role="button" sortname="name" class="fwx-30 sticky stick-4">Nama</th>
+                                                <th role="button" sortname="email" class="fwx-18" slice-item="email">Email</th>
+                                                <th class="fwx-15" slice-item="phone">Phone</th>
+                                                <th role="button" sortname="joindate_time" class="fwx-12">Join Date</th>
+                                                <th class="fwx-15">Work Duration</th>
+                                                <th role="button" sortname="pob" class="fwx-12" slice-item="pob">Place of Birth</th>
+                                                <th class="fwx-12">Birthday</th>
+                                                <th class="fwx-6">Age</th>
+                                                <th class="fwx-20">Job Position</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr motion class="group">
+                                                <td class="sticky stick-0">
+                                                    <div pass-data="no"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="">
+                                                        <input type="checkbox">
+                                                    </div>
+                                                </td>
+                                                <td slice-item-target="pic">
+                                                    <div pass-style="avatar_pictures" class="avatar-xs tablet:avatar-sm"></div>
+                                                </td>
+                                                <td class="sticky stick-4">
+                                                    <div class="flex justify-between">
+                                                        <div pass-attribute="link_view" pass-data="swap-nik" pass-class="gender_class" class="flat flat-link">
+                                                            <div pass-data="identity" class="">
+                                                                <div pass-class="gender_icon" class="icon"></div>
+                                                            </div>
+                                                            <div role="button" pass-data="name" class="label"></div>
+                                                        </div>
+                                                        <div class="flex cursor-pointer min-w-6 justify-end">
+                                                            <div class="btn-group">
+                                                                <button pass-attribute="popup_ktp" class="group/mtrl btn btn-sea btn-xs">
+                                                                    <div class="label">KTP</div>
+                                                                </button>
+                                                                <button pass-attribute="popup_npwp" class="group/mtrl btn btn-forest btn-xs">
+                                                                    <div class="label">NPWP</div>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td slice-item-target="email">
+                                                    <div class="flex gap-2">
+                                                        <div class="icon fa-envelope"></div>
+                                                        <div pass-data="email" class="label"></div>
+                                                    </div>
+                                                </td>
+                                                <td slice-item-target="phone">
+                                                    <div class="flex gap-2">
+                                                        <div class="icon fa-phone"></div>
+                                                        <div pass-data="phone" class="label"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex gap-2">
+                                                        <div class="icon fa-calendar-alt"></div>
+                                                        <div pass-data="joindate" class="label"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="flat">
+                                                        <div class="icon fa-clock"></div>
+                                                        <div pass-data="work" class="label"></div>
+                                                    </div>
+                                                </td>
+                                                <td slice-item-target="pob">
+                                                    <div pass-data="pob"></div>
+                                                </td>
+                                                <td>
+                                                    <div class="flex gap-2">
+                                                        <div class="icon fa-calendar-alt"></div>
+                                                        <div pass-data="dob"></div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div pass-data="age"></div>
+                                                </td>
+                                                <td>
+                                                    <div pass-data="division_set"></div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </section>
+                    
+                    </div>
+
+                    <div class="main-content">
+                    
+                        <section gs-form="userAdd">
+                            <div  class="stbM1">
+                                <div class="wallbox">
+                                    <div  motion class="box ">
+                                        <div class="header">
+                                            <div motion class="label ">
+                                                <h3>Personal Information</h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset error">
+                                                    <div class="label">Name</div>
+                                                    <div class="input">
+                                                        <input
+                                                            type="text"
+                                                            name="name"
+                                                            keyup
+                                                            field
+                                                            validate="latters"
+                                                            class="uppercase"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset disabled">
+                                                    <div class="label">NIK</div>
+                                                    <div class="input">
+                                                        <input
+                                                            type="number"
+                                                            name="nik"
+                                                            field
+                                                            validate="numbers"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Personal Email</div>
+                                                    <div class="input">
+                                                        <input
+                                                            type="text"
+                                                            name="personal_email"
+                                                            field
+                                                            fieldalias="Personal Email"
+                                                            validate="email"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Phone</div>
+                                                    <div class="input">
+                                                        <button
+                                                            class="inps phone-region-toggle"
+                                                            type="button"
+                                                            id="fieldset-phone-region"
+                                                            selectpicker="user-phone-code"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="phone_code" 
+                                                            field
+                                                            pairing-selectpicker="user-phone-code"
+                                                        />
+                                                        <input
+                                                            id="input-phone"
+                                                            type="text"
+                                                            name="phone_number"
+                                                            field
+                                                            phone-input="true"
+                                                            validate="phone"
+                                                            placeholder="Phone Number"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Gender</div>
+                                                    <div class="input">
+                                                        <button
+                                                            class="inps"
+                                                            type="button"
+                                                            id="fieldset-gender"
+                                                            selectpicker="user-gender"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="gender" 
+                                                            field
+                                                            pairing-selectpicker="user-gender"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Place of Birth</div>
+                                                    <div class="input">
+                                                    <input
+                                                        type="text"
+                                                        name="pob"
+                                                        field
+                                                        validate="latters"
+                                                    />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Date of Birth</div>
+                                                    <div class="input">
+                                                        <div class="icon fa-calendar-alt"></div>
+                                                        <button
+                                                            id="fieldset-dob"
+                                                            type="button"
+                                                            class="inps"
+                                                            datepicker="user-dob"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="dob" 
+                                                            field
+                                                            pairing-datepicker="user-dob"
+                                                            validate="date"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Address</div>
+                                                    <div class="input">
+                                                        <textarea 
+                                                            name="address" 
+                                                            field
+                                                            rows="3"
+                                                            placeholder="Address"
+                                                            validate="notnull"
+                                                        ></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">City</div>
+                                                    <div class="input">
+                                                        <button
+                                                            class="inps"
+                                                            type="button"
+                                                            id="fieldset-city"
+                                                            selectpicker="user-city"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="city" 
+                                                            field
+                                                            pairing-selectpicker="user-city"
+                                                        />
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="city_name" 
+                                                            field
+                                                            pairing-selectpicker-value="user-city"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Country</div>
+                                                    <div class="input">
+                                                        <button
+                                                            class="inps"
+                                                            type="button"
+                                                            id="fieldset-country"
+                                                            selectpicker="user-country"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="country" 
+                                                            field
+                                                            pairing-selectpicker="user-country"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wallbox">
+                                    <div  motion class="box ">
+                                        <div class="header">
+                                            <div motion class="label ">
+                                                <h3>Employee Information</h3>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Work Email</div>
+                                                    <div class="input">
+                                                        <input
+                                                            type="text"
+                                                            name="work_email"
+                                                            field
+                                                            validate="email"
+                                                            />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="fields">
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Division</div>
+                                                    <div class="input">
+                                                        <button
+                                                            class="inps"
+                                                            type="button"
+                                                            id="fieldset-division"
+                                                            selectpicker="user-division"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="division" 
+                                                            field
+                                                            pairing-selectpicker="user-division"
+                                                            validate="notnull"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Join Date</div>
+                                                    <div class="input">
+                                                        <div class="icon fa-calendar-alt"></div>
+                                                        <button
+                                                            id="fieldset-joindate"
+                                                            type="button"
+                                                            class="inps"
+                                                            datepicker="user-joindate"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="joindate" 
+                                                            field
+                                                            validate="date"
+                                                            pairing-datepicker="user-joindate"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset class="fieldset ">
+                                                    <div class="label">Status</div>
+                                                    <div class="input">
+                                                        <button
+                                                            class="inps"
+                                                            type="button"
+                                                            id="fieldset-status"
+                                                            selectpicker="user-status"
+                                                        >
+                                                        </button>
+                                                        <input 
+                                                            type="hidden" 
+                                                            name="status" 
+                                                            field
+                                                            pairing-selectpicker="user-status"
+                                                        />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid-2">
+                                                <div motion fieldset gs-image-uploader="ktp" class=" fieldset">
+                                                    <div class="label">KTP</div>
+                                                    <div class="input-file">
+                                                        <div class="loading" file-progress></div>
+                                                        <div class="display" file-display></div>
+                                                        <input type="hidden" field name="ktp" file-input>
+                                                        <div class="control">
+                                                            <button type="button" file-browse>
+                                                                <div class="icon fa-upload"></div>
+                                                                <div class="label">Browse</div>
+                                                            </button>
+                                                            <button type="button" file-preview>
+                                                                <div class="icon fa-image"></div>
+                                                                <div class="label">Preview</div>
+                                                            </button>
+                                                            <button type="button" file-remove>
+                                                                <div class="icon fa-trash"></div>
+                                                                <div class="label">Remove</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reports">
+                                                        <div class="report group-notify" file-notif></div>
+                                                        <div class="report group-note">
+                                                            <div motion class=" note">
+                                                                <div class="icon fa-info-circle"></div>
+                                                                <div class="label">Use aspec ratio 16:9 to better display.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div motion fieldset gs-image-uploader="npwp" class=" fieldset">
+                                                    <div class="label">NPWP</div>
+                                                    <div class="input-file">
+                                                        <div class="loading" file-progress></div>
+                                                        <div class="display" file-display></div>
+                                                        <input type="hidden" field name="npwp" file-input>
+                                                        <div class="control">
+                                                            <button type="button" file-browse>
+                                                                <div class="icon fa-upload"></div>
+                                                                <div class="label">Browse</div>
+                                                            </button>
+                                                            <button type="button" file-preview>
+                                                                <div class="icon fa-image"></div>
+                                                                <div class="label">Preview</div>
+                                                            </button>
+                                                            <button type="button" file-remove>
+                                                                <div class="icon fa-trash"></div>
+                                                                <div class="label">Remove</div>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="reports">
+                                                        <div class="report group-notify" file-notif></div>
+                                                        <div class="report group-note">
+                                                            <div motion class=" note">
+                                                                <div class="icon fa-info-circle"></div>
+                                                                <div class="label">Use aspec ratio 16:9 to better display.</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="fieldset"></div>
+                                                <div class="fieldset"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

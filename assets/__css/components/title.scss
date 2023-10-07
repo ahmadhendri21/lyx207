@@ -1,0 +1,19 @@
+@layer components {
+    .crome {
+        @apply
+        w-full
+        flex
+        justify-between
+        items-start
+        bg-soft-f4
+        border-b
+        border-b-dark-e
+        ;
+        .title {
+            @apply
+            text-lg
+            font-bold
+            ;
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@layer components {
+
+    .selectpicker {
+        @apply
+        relative
+        w-full
+        py-0
+        bg-white
+        overflow-x-auto
+        scrollbar-hide
+        flybox-tablet-shadow
+
+        desktop:flybox-desktop-shadow
+    }
+    .selectpicker > .item{
+        @apply
+        flex
+        gap-2
+        px-4
+        py-2
+        duration-200
+        transition-all
+        border-b
+        border-dark-e
+        
+        hover:bg-forest
+        hover:text-white
+    }
+    
+    .selectpicker > .item.selected{
+        @apply
+        bg-carnival
+        text-white
+        
+        hover:bg-forest
+        hover:text-white
+    }
+
+    .selectpicker .option-other {
+        @apply
+        flex
+        justify-start
+    }
+    .selectpicker .option-other-toggle {
+        @apply
+        py-2
+        px-4
+        text-left
+        flex-grow
+
+        hover:bg-forest
+        hover:text-white
+    }
+    .selectpicker .option-other-input{
+        @apply
+        w-full
+        flex
+        justify-between
+    }
+    .selectpicker .option-other-input > input{
+        @apply
+        flex-grow
+        px-4
+        py-3
+    }
+    .selectpicker .option-other-input > button{
+        @apply
+        bg-forest
+        text-white
+        px-4
+    }
+}

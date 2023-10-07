@@ -1,0 +1,33 @@
+@layer components {
+    [motion] {
+        transition-timing-function: linear;
+        transition-duration: 200ms;
+        transition-property: all;
+    }
+    .mt-bottom,
+    .mt-left,
+    .mt-right,
+    .mt-top{
+        opacity: 0;
+    }
+    .mt-bottom{
+        transform: translateY(20px);
+    }
+    .mt-top{
+        transform: translateY(-20px);
+    }
+    .mt-left{
+        transform: translateX(-20px); 
+    }
+    .mt-right{
+        transform: translateX(20px);
+    }
+    .mt-onbottom,
+    .mt-onleft,
+    .mt-onright,
+    .mt-ontop{
+        opacity: 1;
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}

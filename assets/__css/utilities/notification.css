@@ -1,0 +1,108 @@
+@layer {
+
+    .center-top-notification {
+        @apply fixed z-440 top-20 justify-center w-full;
+    }
+
+    .ntf-m1 {
+        @apply flex items-start justify-between gap-3 text-xs;
+    }
+    .ntf-m1 > .message {
+        @apply w-full;
+    }
+
+    .group-notify {
+        @apply
+        flex
+        flex-col
+        gap-y-1
+    }
+
+    .notify {
+        @apply 
+        flex 
+        justify-center
+    }
+
+    .notify > .elements {
+        @apply 
+        relative 
+        flex 
+        justify-between
+        items-start
+        text-xs
+        gap-2
+    }
+    
+    .notify > .elements > .message{
+        @apply 
+        flex-grow
+    }
+    .notify > .elements.success {
+        @apply 
+        text-forest
+    }
+    .notify > .elements.warning {
+        @apply 
+        text-carnival
+    }
+    .notify > .elements.error {
+        @apply 
+        text-blood
+    }
+    .notify > .elements.load {
+        @apply 
+        animate-pulse
+    }
+
+    .notify.inline {
+        @apply 
+        flex
+    }
+
+
+    .notify.pop {
+        @apply 
+        first:pt-4
+        justify-center 
+    }
+    .notify.pop>.elements {
+        @apply 
+        bg-white 
+        rounded-2x 
+        !shadow-md
+    }
+    .notify.pop>.elements.success {
+        @apply 
+        bg-forest 
+        text-white
+    }
+    .notify.pop>.elements.warning {
+        @apply 
+        bg-carnival 
+        text-white
+    }
+    .notify.pop>.elements.error {
+        @apply 
+        bg-blood 
+        text-white
+    }
+    .notify.pop>.elements > .icon {
+        @apply 
+        p-2
+    }
+    .notify.pop>.elements > .message {
+        @apply 
+        p-2 
+        flex-grow
+    }
+    
+    .notify.pop>.elements > .close {
+        @apply 
+        p-2
+    }
+    .notify.pop>.elements > .close > .icon {
+        @apply 
+        !rotate-45
+    }
+}

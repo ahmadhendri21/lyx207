@@ -1,0 +1,10 @@
+@layer components {
+
+    .cda {
+        @apply font-aileron-light font-bold;
+    }
+
+    .typo-2{
+        @apply cda;
+    }
+}

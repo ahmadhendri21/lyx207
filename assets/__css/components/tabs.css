@@ -1,0 +1,27 @@
+@layer components {
+    .tabs {
+        @apply
+        relative
+        w-full
+    }
+
+    .tabs > .tab-header {
+        @apply
+        flex
+    }
+
+    .tabs > .tab-content {
+        @apply
+        relative
+    }
+
+    .tabs > .tab-content > .tab-content-item {
+        @apply
+        hidden
+    }
+    
+    .tabs > .tab-content > .tab-content-item.active {
+        @apply
+        block
+    }
+}

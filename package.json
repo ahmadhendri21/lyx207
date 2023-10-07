@@ -1,0 +1,26 @@
+{
+  "scripts": {
+    "taildev": "npx tailwindcss --postcss -i ./assets/__css/main.css -o ./public/css/style.css --watch",
+    "tailpro": "npx tailwindcss -i ./assets/__css/main.css -o ./public/css/style.min.css --minify"
+  },
+  "name": "layout",
+  "version": "1.0.0",
+  "description": "layouts",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "prettier": "^2.8.4",
+    "prettier-plugin-tailwindcss": "^0.2.8",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "tailwindcss": "^3.2.7",
+    "tailwindcss-current": "^1.0.0",
+    "tailwindcss-localized": "^1.0.0",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "author": "ahmadhendri",
+  "license": "ISC"
+}
